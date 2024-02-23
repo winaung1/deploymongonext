@@ -7,11 +7,10 @@ const Form = () => {
     const [age, setAge] = useState()
     const [message, setMessage] = useState()
 
-    const url = `${process.env.API_URL}/api/users`
     const handleSubmit =  async (e) => {
         e.preventDefault()
         const data = {name, age, message}
-        await axios.post(url, data)
+        await axios.post(`${process.env.API_URL}/api/users`, data)
     }
 
  

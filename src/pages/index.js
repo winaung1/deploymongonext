@@ -8,7 +8,7 @@ export default function Component() {
   const [users, setUsers] = useState()
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/users').then(res => {
+    axios.get('/api/users').then(res => {
         setUsers(res.data.test)
     })
 }, [])
